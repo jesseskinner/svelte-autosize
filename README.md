@@ -14,7 +14,7 @@ npm install svelte-autosize
 
 ```html
 <script>
-	import autosize from 'svelte-autosize';
+import autosize from 'svelte-autosize';
 </script>
 
 <textarea use:autosize></textarea>
