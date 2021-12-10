@@ -1,6 +1,6 @@
 {
   "name": "svelte-autosize",
-  "version": "1.0.0-rc1",
+  "version": "1.0.0",
   "description": "Svelte action to automatically adjust textarea height.",
   "main": "index.js",
   "scripts": {
