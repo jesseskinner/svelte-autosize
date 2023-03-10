@@ -4,6 +4,8 @@ Svelte action to automatically adjust textarea height to match its contents.
 
 Simply wraps [autosize by Jack Moore](https://github.com/jackmoore/autosize) in a Svelte action.
 
+See [the autosize website](http://www.jacklmoore.com/autosize/) for additional documentation.
+
 ## Install via NPM
 
 ```
@@ -18,6 +20,27 @@ import autosize from 'svelte-autosize';
 </script>
 
 <textarea use:autosize></textarea>
+```
+
+If you need to reset the textarea height, you can use `autosize.update(textarea)`. For example:
+
+```html
+<script>
+import {tick} from 'svelte';
+import autosize from 'svelte-autosize';
+
+let textarea;
+let value = '';
+	
+function reset() {
+  value = '';
+  textarea.style.height = '';
+  tick(() => autosize.update(textarea));
+}
+</script>
+
+<textarea use:autosize bind:this={textarea} bind:value></textarea>
+<button on:click={reset}>Reset</button>
 ```
 
 ## License
