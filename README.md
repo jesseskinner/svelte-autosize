@@ -32,10 +32,10 @@ import autosize from 'svelte-autosize';
 let textarea;
 let value = '';
 	
-function reset() {
+async function reset() {
   value = '';
-  textarea.style.height = '';
-  tick(() => autosize.update(textarea));
+  await tick();
+  autosize.update(textarea);
 }
 </script>
 
