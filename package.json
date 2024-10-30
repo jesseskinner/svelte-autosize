@@ -24,6 +24,6 @@
   "homepage": "https://github.com/jesseskinner/svelte-autosize#readme",
   "dependencies": {
     "autosize": "*",
-    "svelte": "^4.0.0"
+    "svelte": ">=3.0.0"
   }
 }
